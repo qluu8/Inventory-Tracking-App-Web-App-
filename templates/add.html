@@ -9,26 +9,25 @@
     <body>
         <h1>Adding a Card</h1>
         <form method="POST" action="/add">
-            <label>1. Card Name</label>
+            <label id="addLabels">1. Card Name</label>
             <input type="text" name="cardName">
             <br>
 
-            <label>2. Card Number</label>
+            <label id="addLabels">2. Card Number</label>
             <input type="text" name="cardID">
             <br>
 
-            <label>3. Quantity</label>
+            <label id="addLabels">3. Quantity</label>
             <input type="number" name="quantity">
             <br>
 
-            <label>4. Location of Card</label>
+            <label id="addLabels">4. Location of Card</label>
             <input type="text" name="location">
             <br>
 
-            <button type="submit">Save Card</button>
+            <button type="submit" class="button">Save Card</button>
         </form>
         <br>
 
-        <a href="/">Back to Inventory</a>
-    </body>
+        <a href="/" class="button">Back to Inventory</a>
 </html>
