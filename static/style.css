@@ -27,6 +27,8 @@ th{
 button{
     padding: 8px 12px;
     cursor: pointer;
+    border: black;
+    border-radius: 3px;
 }
 
 a{
@@ -52,6 +54,7 @@ a{
     margin-bottom: 20px;
 }
 
-#addLabels{
+.card-form{
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
