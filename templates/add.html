@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Adding a Card</title>
+    </head>
+
+    <body>
+        <h1>Adding a Card</h1>
+        <form method="POST" action="/add">
+            <label>Card Name</label>
+            <input type="text" name="cardName">
+            <br>
+
+            <label>Card Number</label>
+            <input type="text" name="cardID">
+            <br>
+
+            <label>Quantity</label>
+            <input type="number" name="quantity">
+            <br>
+
+            <label>Location of Card</label>
+            <input type="text" name="location">
+            <br>
+
+            <button type="submit">Save Card</button>
+        </form>
+        <br>
+
+        <a href="/">Back to Inventory</a>
+    </body>
+</html>

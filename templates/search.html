@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>Search for a Card</head>
+
+    <body>
+        <h1>Searching for a Card</h1>
+        <form method="POST" action="/search">
+            <label>Card Name</label>
+            <input type="text" name="cardName">
+            <br>
+            
+            <label>Card Number</label>
+            <input type="text" name="cardID">
+            <br>
+
+            <button type="submit">Search</button>
+
+        </form>
+        <br>
+
+        <a href="/">Back to Inventory</a>
+        {% if cards %}
+            <h2>Search Results</h2>
+            <table border="1">
+                <tr>
+                    <th>Card Name</th>
+                    <th>Card Number</th>
+                    <th>Quantity</th>
+                    <th>Location</th>
+                </tr>
+                {% for card in cards %}
+                <tr>
+                    <td>{{ card[0] }} </td>
+                    <td>{{ card[1] }} </td>
+                    <td>{{ card[2] }} </td>
+                    <td>{{ card[3] }} </td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </body>
+
+
+</html>

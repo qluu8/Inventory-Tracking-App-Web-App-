@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Inventory Tracking Web App
+        </title>
+    </head>
+    <body>
+        <h1>Card Inventory</h1>
+
+        <div>
+            <a href="/add">
+                <button>Add Card</button>
+            </a>
+
+            <a href="/search">
+                <button>Search Card</button>
+            </a>
+        </div>
+
+        <br>
+
+        <table border="1">
+            <tr>
+                <th>Card Name</th>
+                <th>Card Number</th>
+                <th>Quantity</th>
+                <th>Location</th>
+            </tr>
+            {% for card in cards %}
+            <tr>
+                <td>{{ card[0] }}</td>
+                <td>{{ card[1] }}</td>
+                <td>{{ card[2] }}</td>
+                <td>{{ card[3] }}</td>
+                <td>
+                    <form method="POST" action="/delete">
+                        <input type="hidden" name="cardName" value="{{ card[0] }}">
+                        <input type="hidden" name="cardID" value="{{ card[1] }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+
+
+</html>
