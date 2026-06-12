@@ -8,13 +8,9 @@
     <body>
         <h1>BamboozleTCG Card Inventory</h1>
 
-        <div>
-            <a href="/add">
-                <button>Add Card</button>
-            </a>
-            <a href="/search">
-                <button>Search Card</button>
-            </a>
+        <div class="button-container">
+            <a href="/add"class="button">Add Card</a>
+            <a href="/search"class="button">Search Card</a>
         </div>
 
         <br>
@@ -36,7 +32,7 @@
                     <form method="POST" action="/delete">
                         <input type="hidden" name="cardName" value="{{ card[0] }}">
                         <input type="hidden" name="cardID" value="{{ card[1] }}">
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="button">Delete</button>
                     </form>
                 </td>
             </tr>
