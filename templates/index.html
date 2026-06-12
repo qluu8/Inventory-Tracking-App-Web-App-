@@ -2,18 +2,16 @@
 
 <html>
     <head>
-        <title>
-            Inventory Tracking Web App
-        </title>
+        <title>Inventory Tracking Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1>Card Inventory</h1>
+        <h1>BamboozleTCG Card Inventory</h1>
 
         <div>
             <a href="/add">
                 <button>Add Card</button>
             </a>
-
             <a href="/search">
                 <button>Search Card</button>
             </a>
