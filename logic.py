@@ -4,6 +4,12 @@ def addCard(cardName, cardNum, quantity, location):
     conn = get_connection()
     cur = conn.cursor()
     
+    cardName.strip()
+    cardNum.strip()
+    
+    if cardName == "" or cardNum == "":
+        return False
+    
     cur.execute("""
                 INSERT INTO cards (cardN, cardID, quantity, location)
                 VALUES (?, ?, ?, ?)
